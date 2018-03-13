@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+ <h1 th:text="${title}">Default Title</h1>
+
+<p th:unless="${countries} and ${countries.size()} ">no countries :(</p>
+
+ <a href="/country/add">Add Country</a>
+ <ul>
+     <li th:each="country : ${countries}" th:text="${country}"></li>
+ </ul>
+
+</body>
+</html>
